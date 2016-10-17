@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993F77451DB4C75600C6EA97 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 993F77441DB4C75600C6EA97 /* .swiftlint.yml */; };
 		999FFBA91DB0803A00CE64E3 /* NameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBA81DB0803A00CE64E3 /* NameTableViewController.swift */; };
 		999FFBAB1DB0831700CE64E3 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBAA1DB0831700CE64E3 /* RegistrationTableViewController.swift */; };
 		999FFBAD1DB0839700CE64E3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBAC1DB0839700CE64E3 /* HomeTableViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		8889DAC0BE818DA35FED4F0D /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		993F77441DB4C75600C6EA97 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		999FFBA81DB0803A00CE64E3 /* NameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewController.swift; sourceTree = "<group>"; };
 		999FFBAA1DB0831700CE64E3 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		999FFBAC1DB0839700CE64E3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		99E508EF1DB071EC008C0ADD = {
 			isa = PBXGroup;
 			children = (
+				993F77441DB4C75600C6EA97 /* .swiftlint.yml */,
 				99E508FA1DB071EC008C0ADD /* Demo */,
 				99E508F91DB071EC008C0ADD /* Products */,
 				0F118214463AA2E2691ADA66 /* Pods */,
@@ -116,6 +119,7 @@
 				99E508F61DB071EC008C0ADD /* Resources */,
 				27B9463F691646038E42D98B /* [CP] Embed Pods Frameworks */,
 				106ED84272786020E9B47065 /* [CP] Copy Pods Resources */,
+				99DE61F41DB4C1D20079021B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -167,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993F77451DB4C75600C6EA97 /* .swiftlint.yml in Resources */,
 				99E509061DB071EC008C0ADD /* LaunchScreen.storyboard in Resources */,
 				99E509031DB071EC008C0ADD /* Assets.xcassets in Resources */,
 				99E509011DB071EC008C0ADD /* Main.storyboard in Resources */,
@@ -205,6 +210,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		99DE61F41DB4C1D20079021B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		DE9CA2DBA9143544DBD422E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

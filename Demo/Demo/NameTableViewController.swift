@@ -40,9 +40,11 @@ class NameTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: NameTableViewCell = tableView.dequeueReusableCellWithIdentifier("NameCell", forIndexPath: indexPath) as! NameTableViewCell
-
-        cell.nameLabel.text = nameList[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("NameCell", forIndexPath: indexPath)
+        if let nameCell = cell as? NameTableViewCell {
+            nameCell.nameLabel.text = nameList[indexPath.row]
+        }
         
         return cell
     }
