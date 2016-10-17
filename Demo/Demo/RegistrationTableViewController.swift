@@ -25,33 +25,33 @@ class RegistrationTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func onCancelAction(_ sender: AnyObject) {
+    @IBAction func onCancelAction(sender: AnyObject) {
         // 閉じる
-        self.dismiss(animated: true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
 
     }
     
-    @IBAction func onSaveAction(_ sender: AnyObject) {
+    @IBAction func onSaveAction(sender: AnyObject) {
         
         // 閉じる
-        self.dismiss(animated: true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
 
     }
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RegistrationNameCell", for: indexPath)
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("RegistrationNameCell", forIndexPath: indexPath)
 
         // Configure the cell...
 
