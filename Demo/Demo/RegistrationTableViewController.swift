@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 class RegistrationTableViewController: UITableViewController {
+
+    let realmDB = UserNameModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +21,9 @@ class RegistrationTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let nameList = self.getAll()
+        print(nameList)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,10 +39,89 @@ class RegistrationTableViewController: UITableViewController {
     
     @IBAction func onSaveAction(sender: AnyObject) {
         
+        realmDB.id = 1
+        realmDB.username = "namae"
+        self.save()
+        self.find()
+
         // 閉じる
         dismissViewControllerAnimated(true, completion: nil)
 
     }
+    
+    // MARK: - Realm
+    
+//    func realmConnect() {
+//        realmDB.id = 1;
+//        realmDB.username = "namae";
+//        self.save();
+//        self.find();
+//    }
+
+    /**
+     保存処理
+     */
+    func save() {
+        do {
+            let realm = try Realm()
+            
+            try realm.write {
+                realm.add(self.realmDB)
+            }
+        } catch {
+            
+        }
+    }
+    
+    func find() {
+        if let realm = try? Realm() {
+            let dataContent = realm.objects(UserNameModel)
+            print(dataContent)
+        }
+    }
+    
+    func dataUpdate() {
+        
+        do {
+            if let realm = try? Realm() {
+                
+                let data = realm.objects(UserNameModel).last!
+                try realm.write {
+                    data.username = "hirokazu"
+                }
+            }
+        } catch {
+            
+        }
+    }
+    
+    func deleate() {
+        
+        do {
+            if let realm = try? Realm() {
+                
+                let data = realm.objects(UserNameModel).last!
+                
+                try realm.write {
+                    realm.delete(data)
+                }
+            }
+            
+        } catch {
+            
+        }
+    }
+
+    /// データを全件取得する
+    /// - returns: ReceivableModelのコレクション
+    func getAll() -> Results<UserNameModel>? {
+        if let realm = try? Realm() {
+            return realm.objects(UserNameModel).sorted("id")
+        } else {
+            return nil
+        }
+    }
+
     
     // MARK: - Table view data source
 

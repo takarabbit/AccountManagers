@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993357531DB86FB300F29C31 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993357511DB86FB300F29C31 /* Realm.framework */; };
+		993357541DB86FB300F29C31 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993357521DB86FB300F29C31 /* RealmSwift.framework */; };
 		993F77451DB4C75600C6EA97 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 993F77441DB4C75600C6EA97 /* .swiftlint.yml */; };
+		99648E051DB8B17E00B0FD45 /* UserNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99648E041DB8B17E00B0FD45 /* UserNameModel.swift */; };
 		999FFBA91DB0803A00CE64E3 /* NameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBA81DB0803A00CE64E3 /* NameTableViewController.swift */; };
 		999FFBAB1DB0831700CE64E3 /* RegistrationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBAA1DB0831700CE64E3 /* RegistrationTableViewController.swift */; };
 		999FFBAD1DB0839700CE64E3 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999FFBAC1DB0839700CE64E3 /* HomeTableViewController.swift */; };
@@ -23,7 +26,10 @@
 
 /* Begin PBXFileReference section */
 		8889DAC0BE818DA35FED4F0D /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		993357511DB86FB300F29C31 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
+		993357521DB86FB300F29C31 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		993F77441DB4C75600C6EA97 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		99648E041DB8B17E00B0FD45 /* UserNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameModel.swift; sourceTree = "<group>"; };
 		999FFBA81DB0803A00CE64E3 /* NameTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameTableViewController.swift; sourceTree = "<group>"; };
 		999FFBAA1DB0831700CE64E3 /* RegistrationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationTableViewController.swift; sourceTree = "<group>"; };
 		999FFBAC1DB0839700CE64E3 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993357531DB86FB300F29C31 /* Realm.framework in Frameworks */,
+				993357541DB86FB300F29C31 /* RealmSwift.framework in Frameworks */,
 				E922FA3C7C71BE152B05E859 /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +72,8 @@
 		2FC419D2EF846C1137C2E89F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				993357511DB86FB300F29C31 /* Realm.framework */,
+				993357521DB86FB300F29C31 /* RealmSwift.framework */,
 				AA35A74847DBC1C6FCE6BE2B /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
@@ -98,6 +108,7 @@
 				999FFBAE1DB085E400CE64E3 /* RegistrationNameTableViewCell.swift */,
 				999FFBA81DB0803A00CE64E3 /* NameTableViewController.swift */,
 				999FFBB01DB09C4000CE64E3 /* NameTableViewCell.swift */,
+				99648E041DB8B17E00B0FD45 /* UserNameModel.swift */,
 				99E508FF1DB071EC008C0ADD /* Main.storyboard */,
 				99E509021DB071EC008C0ADD /* Assets.xcassets */,
 				99E509041DB071EC008C0ADD /* LaunchScreen.storyboard */,
@@ -253,6 +264,7 @@
 				999FFBAB1DB0831700CE64E3 /* RegistrationTableViewController.swift in Sources */,
 				999FFBA91DB0803A00CE64E3 /* NameTableViewController.swift in Sources */,
 				999FFBAD1DB0839700CE64E3 /* HomeTableViewController.swift in Sources */,
+				99648E051DB8B17E00B0FD45 /* UserNameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
