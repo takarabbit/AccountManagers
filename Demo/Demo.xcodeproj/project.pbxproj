@@ -25,11 +25,26 @@
 		E922FA3C7C71BE152B05E859 /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA35A74847DBC1C6FCE6BE2B /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9987AF481DC05A83007A827F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8889DAC0BE818DA35FED4F0D /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		993357511DB86FB300F29C31 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
 		993357521DB86FB300F29C31 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		993F77441DB4C75600C6EA97 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9987AF3F1DC05A83007A827F /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		9987AF411DC05A83007A827F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BA5B221DB9BBE5001691E2 /* UserNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameModel.swift; sourceTree = "<group>"; };
 		99BA5B261DB9BBE5001691E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		99BA5B281DB9BBE5001691E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +93,15 @@
 				AA35A74847DBC1C6FCE6BE2B /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9987AF3E1DC05A83007A827F /* DemoStickers */ = {
+			isa = PBXGroup;
+			children = (
+				9987AF3F1DC05A83007A827F /* Stickers.xcassets */,
+				9987AF411DC05A83007A827F /* Info.plist */,
+			);
+			path = DemoStickers;
 			sourceTree = "<group>";
 		};
 		99BA5B201DB9BBE5001691E2 /* Configurations */ = {
@@ -153,6 +177,7 @@
 			children = (
 				993F77441DB4C75600C6EA97 /* .swiftlint.yml */,
 				99E508FA1DB071EC008C0ADD /* Demo */,
+				9987AF3E1DC05A83007A827F /* DemoStickers */,
 				99E508F91DB071EC008C0ADD /* Products */,
 				0F118214463AA2E2691ADA66 /* Pods */,
 				2FC419D2EF846C1137C2E89F /* Frameworks */,
@@ -196,6 +221,7 @@
 				27B9463F691646038E42D98B /* [CP] Embed Pods Frameworks */,
 				106ED84272786020E9B47065 /* [CP] Copy Pods Resources */,
 				99DE61F41DB4C1D20079021B /* ShellScript */,
+				9987AF481DC05A83007A827F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);

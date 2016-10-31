@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import Repro
 
 class RegistrationTableViewController: UITableViewController {
 
@@ -24,6 +25,14 @@ class RegistrationTableViewController: UITableViewController {
         
         let nameList = self.getAll()
         print(nameList)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Repro.track("RegistrationTableViewController", properties: nil)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

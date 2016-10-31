@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Repro
 
 class HomeTableViewController: UITableViewController {
 
@@ -18,6 +19,14 @@ class HomeTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        Repro.track("HomeTableViewController", properties: nil)
+
+
     }
 
     override func didReceiveMemoryWarning() {

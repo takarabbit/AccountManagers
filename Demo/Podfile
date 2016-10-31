@@ -9,6 +9,7 @@ target 'Demo' do
   pod 'Realm', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'master', :submodules => true
   pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'master', :submodules => true
   pod 'THPinViewController' #パスコードロック画面
+  pod 'Repro'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|
