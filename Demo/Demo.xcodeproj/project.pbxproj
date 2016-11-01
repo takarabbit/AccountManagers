@@ -10,6 +10,7 @@
 		993357531DB86FB300F29C31 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993357511DB86FB300F29C31 /* Realm.framework */; };
 		993357541DB86FB300F29C31 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993357521DB86FB300F29C31 /* RealmSwift.framework */; };
 		993F77451DB4C75600C6EA97 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 993F77441DB4C75600C6EA97 /* .swiftlint.yml */; };
+		997597B81DC875A1005DA610 /* ModeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997597B71DC875A1005DA610 /* ModeSelectViewController.swift */; };
 		99BA5B351DB9BBE5001691E2 /* UserNameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BA5B221DB9BBE5001691E2 /* UserNameModel.swift */; };
 		99BA5B361DB9BBE5001691E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BA5B251DB9BBE5001691E2 /* LaunchScreen.storyboard */; };
 		99BA5B371DB9BBE5001691E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99BA5B271DB9BBE5001691E2 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		993357511DB86FB300F29C31 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/Realm/Realm.framework"; sourceTree = "<group>"; };
 		993357521DB86FB300F29C31 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Demo-edwkkndtuetxipacezwnchwieojh/Build/Products/Debug-iphoneos/RealmSwift/RealmSwift.framework"; sourceTree = "<group>"; };
 		993F77441DB4C75600C6EA97 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		997597B71DC875A1005DA610 /* ModeSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModeSelectViewController.swift; sourceTree = "<group>"; };
 		9987AF3F1DC05A83007A827F /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		9987AF411DC05A83007A827F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99BA5B221DB9BBE5001691E2 /* UserNameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameModel.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				99BA5B291DB9BBE5001691E2 /* HomeTableViewController.swift */,
 				99BA5B2A1DB9BBE5001691E2 /* NameTableViewController.swift */,
 				99BA5B2B1DB9BBE5001691E2 /* RegistrationTableViewController.swift */,
+				997597B71DC875A1005DA610 /* ModeSelectViewController.swift */,
 				99BA5B2C1DB9BBE5001691E2 /* ViewController.swift */,
 			);
 			path = Screens;
@@ -354,6 +357,7 @@
 				99BA5B3E1DB9BBE5001691E2 /* NameTableViewCell.swift in Sources */,
 				99BA5B381DB9BBE5001691E2 /* HomeTableViewController.swift in Sources */,
 				99BA5B351DB9BBE5001691E2 /* UserNameModel.swift in Sources */,
+				997597B81DC875A1005DA610 /* ModeSelectViewController.swift in Sources */,
 				99BA5B3F1DB9BBE5001691E2 /* RegistrationNameTableViewCell.swift in Sources */,
 				99BA5B3A1DB9BBE5001691E2 /* RegistrationTableViewController.swift in Sources */,
 				99BA5B391DB9BBE5001691E2 /* NameTableViewController.swift in Sources */,

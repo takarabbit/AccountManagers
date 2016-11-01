@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import Repro
 
-class RegistrationTableViewController: UITableViewController {
+class RegistrationTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
 
     let realmDB = UserNameModel()
 
@@ -57,7 +57,41 @@ class RegistrationTableViewController: UITableViewController {
         dismissViewControllerAnimated(true, completion: nil)
 
     }
-    
+
+    // Mark: - UIPopoverPresentationControllerDelegate
+
+    func prepareForPopoverPresentation(popoverPresentationController: UIPopoverPresentationController) {
+        popoverPresentationController.permittedArrowDirections = .Up
+        popoverPresentationController.sourceView = self.view
+        popoverPresentationController.sourceRect = CGRect(x: UIScreen.mainScreen().bounds.size.width - 30, y: 40, width: 0, height: 0)
+    }
+
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+
+    // Mark: - Callback function for popover button.
+
+    func presentPopover() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("NameTableViewController")
+        if let popoverContentController = viewController as? NameTableViewController {
+            //            popoverContentController.view.backgroundColor = UIColor.lightGrayColor()
+
+            // Set your popover size.
+            popoverContentController.preferredContentSize = CGSize(width: 200, height: 300)
+
+            // Set the presentation style to modal so that the above methods get called.
+            popoverContentController.modalPresentationStyle = UIModalPresentationStyle.Popover
+
+            // Set the popover presentation controller delegate so that the above methods get called.
+            popoverContentController.popoverPresentationController!.delegate = self
+
+            // Present the popover.
+            self.presentViewController(popoverContentController, animated: true, completion: nil)
+        }
+    }
+
     // MARK: - Realm
     
 //    func realmConnect() {
@@ -146,8 +180,9 @@ class RegistrationTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RegistrationNameCell", forIndexPath: indexPath)
-
-        // Configure the cell...
+        if let nameCell = cell as? RegistrationNameTableViewCell {
+            nameCell.nameButton.addTarget(self, action: #selector(RegistrationTableViewController.presentPopover), forControlEvents: .TouchUpInside)
+        }
 
         return cell
     }
