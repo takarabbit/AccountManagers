@@ -10,8 +10,7 @@ import Foundation
 import RealmSwift
 
 class UserNameModel: Object {
-    dynamic var id : Int = 0
-    dynamic var username = ""
-    
+    dynamic var userNameModelId : Int = 0 // ユニークにするためのID
+    dynamic var username = "" // ユーザー名
 
 }

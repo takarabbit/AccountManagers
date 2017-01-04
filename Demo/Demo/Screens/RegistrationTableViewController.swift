@@ -10,9 +10,26 @@ import UIKit
 import RealmSwift
 import Repro
 
+enum CellType: Int {
+    // User Name
+    // Service
+    // User ID
+    // Password
+    // Service URL
+    // Notes
+
+    case userName = 0
+    case servise = 1
+    case userID = 2
+    case password = 3
+    case serviceURL = 4
+    case notes = 5
+    
+}
+
 class RegistrationTableViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
 
-    let realmDB = UserNameModel()
+    let realmDB = AccountModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +65,7 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
     
     @IBAction func onSaveAction(sender: AnyObject) {
         
-        realmDB.id = 1
+        realmDB.accountModelId = 1
         realmDB.username = "namae"
         self.save()
         self.find()
@@ -118,7 +135,7 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
     
     func find() {
         if let realm = try? Realm() {
-            let dataContent = realm.objects(UserNameModel)
+            let dataContent = realm.objects(AccountModel)
             print(dataContent)
         }
     }
@@ -128,7 +145,7 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
         do {
             if let realm = try? Realm() {
                 
-                let data = realm.objects(UserNameModel).last!
+                let data = realm.objects(AccountModel).last!
                 try realm.write {
                     data.username = "hirokazu"
                 }
@@ -143,7 +160,7 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
         do {
             if let realm = try? Realm() {
                 
-                let data = realm.objects(UserNameModel).last!
+                let data = realm.objects(AccountModel).last!
                 
                 try realm.write {
                     realm.delete(data)
@@ -157,9 +174,9 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
 
     /// データを全件取得する
     /// - returns: ReceivableModelのコレクション
-    func getAll() -> Results<UserNameModel>? {
+    func getAll() -> Results<AccountModel>? {
         if let realm = try? Realm() {
-            return realm.objects(UserNameModel).sorted("id")
+            return realm.objects(AccountModel).sorted("accountModelId")
         } else {
             return nil
         }
@@ -179,9 +196,20 @@ class RegistrationTableViewController: UITableViewController, UIPopoverPresentat
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        // User Name
+        // Service
+        // User ID
+        // Password
+        // Service URL
+        // Notes
+
         let cell = tableView.dequeueReusableCellWithIdentifier("RegistrationNameCell", forIndexPath: indexPath)
-        if let nameCell = cell as? RegistrationNameTableViewCell {
-            nameCell.nameButton.addTarget(self, action: #selector(RegistrationTableViewController.presentPopover), forControlEvents: .TouchUpInside)
+        if let nameCell = cell as? RegistrationInputAndSelectionCell {
+            nameCell.selectionButton.addTarget(self, action: #selector(RegistrationTableViewController.presentPopover), forControlEvents: .TouchUpInside)
+//            nameCell.nameButton.backgroundColor = UIColor.lightGrayColor()
+//            nameCell.nameLabel.backgroundColor = UIColor.brownColor()
+//            nameCell.nameTextField.backgroundColor = UIColor.brownColor()
         }
 
         return cell

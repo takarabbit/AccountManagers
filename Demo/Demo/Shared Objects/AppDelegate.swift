@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Repro
+//import Repro
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc func applicationDidFinishLaunching(application: UIApplication) {
         // Override point for customization after application launch.
 
-        // Setup Repro
-        Repro.setup("3a20377e-1ed2-43cd-aa2c-c0720dade0b2")
+//        // Setup Repro
+//        Repro.setup("3a20377e-1ed2-43cd-aa2c-c0720dade0b2")
 
-        // Start Recording
-        Repro.startRecording()
+//        // Start Recording
+//        Repro.startRecording()
 
     }
 

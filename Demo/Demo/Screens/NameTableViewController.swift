@@ -41,18 +41,19 @@ class NameTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("NameCell", forIndexPath: indexPath)
-        if let nameCell = cell as? NameTableViewCell {
-            nameCell.nameLabel.text = nameList[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("SelectionCell", forIndexPath: indexPath)
+        if let nameCell = cell as? SelectionCell {
+            nameCell.selectionLabel.text = nameList[indexPath.row]
         }
         
         return cell
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let nvc = navigationController {
-            nvc.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true) {
+
         }
+
     }
     /*
     // Override to support conditional editing of the table view.
